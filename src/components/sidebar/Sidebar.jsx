@@ -14,10 +14,7 @@ import {
   TbLayoutSidebarLeftCollapse,
 } from 'react-icons/tb';
 import { CiWarning } from 'react-icons/ci';
-
 import { RiChatNewLine } from 'react-icons/ri';
-import logo from '../../assets/cog_logo.png';
-import plainLogo from '../../assets/plain_logo.png';
 import Modal from '../Modal';
 import ChatList from './ChatList';
 
@@ -57,14 +54,14 @@ const Sidebar = () => {
     >
       <div
         className={`h-dvh w-2/3 flex flex-col justify-start items-center gap-2 p-2 text-white
-                  md:bg-zinc-800 md:w-fit transition-all duration-200
+                  md:bg-zinc-800 md:w-full transition-all duration-200
                   ${!collapsed && 'md:w-1/6 bg-zinc-800 '}
         `}
       >
         <div
           className={`w-full flex ${collapsed ? 'md:flex-col ' : ' flex-row'} justify-between items-center p-2 gap-5`}
         >
-          <div
+          {/* <div
             aria-label="company-logo"
             className={`${collapsed && 'hidden md:block'} transition-all duration-200`}
           >
@@ -78,7 +75,7 @@ const Sidebar = () => {
               className={`${!collapsed && 'hidden md:hidden'} md:block w-7`}
               alt="Cognizant"
             />
-          </div>
+          </div> */}
           <button
             onClick={handleCreateChat}
             className={`
